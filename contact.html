@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | PUA Marketplace</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .contact-info-card {
+            transition: transform 0.3s ease;
+        }
+        .contact-info-card:hover {
+            transform: translateY(-5px);
+        }
+        .contact-icon {
+            font-size: 2rem;
+            color: #0d6efd;
+            margin-bottom: 1rem;
+        }
+        .faq-item {
+            border-bottom: 1px solid #dee2e6;
+            padding: 1rem 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="shop.html">PUA Marketplace</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            Cart <span class="badge bg-warning text-dark cart-count">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>  
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-primary text-white py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Contact Us</h1>
+            <p class="lead">We're here to help! Get in touch with us for any questions or concerns.</p>
+        </div>
+    </div>
+
+    <!-- Contact Information -->
+    <section class="container py-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm contact-info-card">
+                    <div class="card-body text-center">
+                        <i class="bi bi-geo-alt contact-icon"></i>
+                        <h5>Visit Us</h5>
+                        <p class="mb-0">Pharos University in Alexandria<br>
+                        Canal El Mahmoudia Street<br>
+                        Alexandria, Egypt</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm contact-info-card">
+                    <div class="card-body text-center">
+                        <i class="bi bi-envelope contact-icon"></i>
+                        <h5>Email Us</h5>
+                        <p class="mb-0">market@pua.edu.eg<br>
+                        info@pua.edu.eg</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm contact-info-card">
+                    <div class="card-body text-center">
+                        <i class="bi bi-telephone contact-icon"></i>
+                        <h5>Call Us</h5>
+                        <p class="mb-0">+20 103 319 9960<br>
+                        Mon-Fri, 9:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form and Map -->
+    <section class="container py-5">
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-lg-6 mb-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h3 class="card-title mb-4">Send us a Message</h3>
+                        <form id="contact-form" class="needs-validation" novalidate>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                    <div class="invalid-feedback">Please enter your first name.</div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                    <div class="invalid-feedback">Please enter your last name.</div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <select class="form-select" id="subject" required>
+                                    <option value="">Choose a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="billing">Billing Question</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a subject.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                                <div class="invalid-feedback">Please enter your message.</div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="col-lg-6 mb-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-0">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3412.1234567890123!2d29.91234567890123!3d31.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDA3JzI0LjQiTiAyOcKwNTQnNDUuNiJF!5e0!3m2!1sen!2seg!4v1234567890123!5m2!1sen!2seg" 
+                            width="100%" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="container py-5">
+        <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="faq-item">
+                    <h5>How can I track my order?</h5>
+                    <p>You can track your order by logging into your account and visiting the "Orders" section. You'll receive tracking information once your order ships.</p>
+                </div>
+                <div class="faq-item">
+                    <h5>What payment methods do you accept?</h5>
+                    <p>We accept various payment methods including credit cards, PayPal, and cash on delivery for local orders.</p>
+                </div>
+                <div class="faq-item">
+                    <h5>How long does shipping take?</h5>
+                    <p>Standard shipping typically takes 3-5 business days. Express shipping is available for 1-2 day delivery.</p>
+                </div>
+                <div class="faq-item">
+                    <h5>What is your return policy?</h5>
+                    <p>We offer a 14-day return policy for most items. Please ensure items are in their original condition with all packaging intact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="bg-light py-5">
+        <div class="container text-center">
+            <h3 class="mb-4">Connect With Us</h3>
+            <div class="d-flex justify-content-center gap-4">
+                <a href="#" class="text-primary fs-4"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-primary fs-4"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-primary fs-4"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-primary fs-4"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>PUA Marketplace</h5>
+                    <p>Your trusted source for academic materials at Pharos University in Alexandria.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="shop.html" class="text-white">Shop</a></li>
+                        <li><a href="about.html" class="text-white">About</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <small>&copy; 2025 PUA Marketplace. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        // Form validation
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            if (!this.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            } else {
+                event.preventDefault();
+                // Show success message
+                const successAlert = document.createElement('div');
+                successAlert.className = 'alert alert-success position-fixed top-0 end-0 m-3';
+                successAlert.style.zIndex = '1000';
+                successAlert.textContent = 'Message sent successfully!';
+                document.body.appendChild(successAlert);
+
+                // Clear form
+                this.reset();
+
+                // Remove success message after 3 seconds
+                setTimeout(() => {
+                    successAlert.remove();
+                }, 3000);
+            }
+            this.classList.add('was-validated');
+        });
+    </script>
+</body>
+</html>

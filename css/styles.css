@@ -1,0 +1,21 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #F8F9FA;
+    color: #333333;
+  }
+  h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+  }
+  .bg-primary { background-color: #003366 !important; }
+  .bg-secondary { background-color: #8B0000 !important; }
+  .text-accent { color: #FFD700; }
+  .btn-accent {
+    background-color: #FFD700;
+    color: #003366;
+    font-weight: bold;
+  }
+  .faculty-badge {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.5rem;
+  }

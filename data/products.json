@@ -1,0 +1,35 @@
+[
+    {
+        "title": "Pharmaceutical Tools Kit",
+        "faculty": "Pharmacy",
+        "type": "Tool",
+        "price": 300,
+        "image": "assets/images/X.png",
+        "link": "product.html"
+      },
+      {
+        "title": "Intro. DS",
+        "faculty": "Computer Science",
+        "type": "Book",
+        "price": 250,
+        "image": "assets/images/X.png",
+        "link": "product.html"
+      },
+      {
+        "title": "Designing Base",
+        "faculty": "Engineering",
+        "type": "Book",
+        "price": 300,
+        "image": "assets/images/X.png",
+        "link": "product.html"
+      },
+      {
+        "title": "Calculas",
+        "faculty": "Computer Science",
+        "type": "Sheet",
+        "price": 300,
+        "image": "assets/images/X.png",
+        "link": "product.html"
+      }
+      
+]
