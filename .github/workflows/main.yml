@@ -3,33 +3,57 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Make sure it's just 'main'
+      - main
+  workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        
       - name: Copy site files to public
         run: |
           mkdir public
-          cp shop.html public/index.html  # Copy shop.html as index.html
-          cp -r css js assets public/     # Copy all necessary folders
-
+          # Copy shop.html as index.html (your main page)
+          cp shop.html public/index.html
+          
+          # Copy all HTML pages
+          cp *.html public/
+          
+          # Copy frontend directories
+          cp -r css public/
+          cp -r js public/
+          cp -r assets public/
+          cp -r data public/
+          
+          # Copy any other files you might need
+          cp README.md public/ 2>/dev/null || true
+          
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
 
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
