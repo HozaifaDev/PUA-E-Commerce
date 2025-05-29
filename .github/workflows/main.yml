@@ -2,7 +2,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: github.com/HozaifaDev/PUA-E-Commerce/
+    branches: [main]
+
 
 permissions:
   contents: read
