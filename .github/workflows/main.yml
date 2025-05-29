@@ -2,8 +2,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
-
+    branches:
+      - main  # Make sure it's just 'main'
 
 permissions:
   contents: read
@@ -15,10 +15,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build static files
+
+      - name: Copy site files to public
         run: |
           mkdir public
-          echo "Hello World!" > public/shop.html
+          cp shop.html public/index.html  # Copy shop.html as index.html
+          cp -r css js assets public/     # Copy all necessary folders
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
